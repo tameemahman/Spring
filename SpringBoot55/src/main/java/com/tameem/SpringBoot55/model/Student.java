@@ -19,7 +19,7 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private int roll;
     private String name;
     @Column(unique = true,nullable = false,name="email")
