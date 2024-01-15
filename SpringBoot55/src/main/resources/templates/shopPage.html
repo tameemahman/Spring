@@ -1,0 +1,47 @@
+
+                <div class="row">
+
+                    <div th:each="pro:${productList}">
+                        <!-- Start Left Blog -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+
+                            <div class="single-blog">
+                                <div class="single-blog-img">
+                                    <a href="blog.html">
+                                        <img src="https://homeandbeyond.com.bd/cdn/shop/articles/5909014_540x.jpg?v=1657792186"
+                                             alt="">
+                                    </a>
+                                </div>
+                                <!--                                <div class="blog-meta">-->
+                                <!--                                      <span class="comments-type">-->
+                                <!--                                        <i class="fa fa-comment-o"></i>-->
+                                <!--                                        <a href="#">13 comments</a>-->
+                                <!--                                      </span>-->
+                                <!--                                    <span class="date-type">-->
+                                <!--                                        <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16-->
+                                <!--                                      </span>-->
+                                <!--                                </div>-->
+                                <div class="blog-text">
+                                    <h4>
+                                        <a href="blog.html">Reasons We Love Scented Diffusers
+                                            JUL 14, 2022</a>
+                                    </h4>
+                                    <h4 th:text="${pro.name}"></h4>
+                                    <p th:text="${pro.description}"></p>
+                                    <h4 th:text="${pro.price}"></h4>
+                                    <h4 th:text="${pro.stockQuantity}"></h4>
+                                    <p>
+
+
+                                        Reed diffusers are a popular modern choice for freshening and scenting the air
+                                        in your home and for their potential to act as calming or alertness-improving
+                                        tools. Here are five facts about reed diffusers.
+                                    </p>
+
+                                </div>
+                                <span>
+                                    <a href="blog.html" class="ready-btn">Read more</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>

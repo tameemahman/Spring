@@ -1,34 +1,34 @@
 package com.tameem.SpringBoot55.service;
 
-import com.tameem.SpringBoot55.model.Student;
-import com.tameem.SpringBoot55.repository.studentrepo;
+import com.tameem.SpringBoot55.model.Product;
+import com.tameem.SpringBoot55.repository.Productrepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Studentservice {
+public class Productservice {
 
 @Autowired
-    private studentrepo repo;
+    private Productrepo repo;
 
 
 
 
-public void  saveStudent(Student s)
+public void  saveProduct(Product s)
 {
     repo.save(s);
 }
 
 
-public List<Student>getAllStudent(){
+public List<Product>getAllProduct(){
 
     return  repo.findAll();
 }
 
 
-public  Student findById(int id){
+public Product findById(int id){
     return  repo.findById(id).get();
 }
 }

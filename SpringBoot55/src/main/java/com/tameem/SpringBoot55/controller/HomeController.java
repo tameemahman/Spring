@@ -14,6 +14,26 @@ public class HomeController {
 
         return "home";
     }
+//    @GetMapping( "/page")
+//
+//     public String shopPage(){
+//
+//        return "shopPage";
+//    }
+
+    @GetMapping( "/shop")
+
+    public String shop(){
+
+        return "shop";
+    }
+
+    @GetMapping( "/feature")
+
+    public String feature(){
+
+        return "featuring";
+    }
     @GetMapping(value = {"/mypage", "/abc"})
     public  String mypage(){
 

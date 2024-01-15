@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Add Product</title>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Add Product</h2>
+    <form id="addProductForm" method="post" th:action="@{/product/pro_save}" th:object="${product}">
+        <div class="mb-3">
+            <label for="productName" class="form-label">Product Name</label>
+            <input type="text" class="form-control" id="productName" th:field="*{name}" required>
+        </div>
+        <div class="mb-3">
+            <label for="productDescription" class="form-label">Product Description</label>
+            <textarea class="form-control" id="productDescription" th:field="*{description}" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="productPrice" class="form-label">Product Price</label>
+            <input type="number" class="form-control" id="productPrice" th:field="*{price}" step="0.01" required>
+        </div>
+        <div class="mb-3">
+            <label for="stockQuantity" class="form-label">Stock Quantity</label>
+            <input type="number" class="form-control" id="stockQuantity" th:field="*{stockQuantity}" required>
+        </div>
+        <button type="submit" class="btn btn-primary" >Add Product</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-eaQs3qU4a1g2V7xGgA3sZaYwEK2YMqN5H5jf25UOp9t7jNRaMpqhZ8a4ESMj6/J" crossorigin="anonymous"></script>
+<script>
+    function addProduct() {
+        // You can add JavaScript logic here to handle form submission,
+        // gather form data, and send it to the server using AJAX or other methods.
+        // For simplicity, this example only includes the button click event.
+        console.log("Product added!");
+    }
+</script>
+
+</body>
+</html>

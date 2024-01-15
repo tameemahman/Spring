@@ -5,18 +5,25 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
+@Entity(name="products")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Department {
 
-@Id
+
+
+public class Product {
+
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Integer id;
-@Column(unique = true)
+    private int id;
+
     private String name;
-private String shortCode;
+    private String description;
+    private float price;
+    private int stockQuantity;
+
 
 
 }
