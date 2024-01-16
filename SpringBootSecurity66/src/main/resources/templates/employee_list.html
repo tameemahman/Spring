@@ -1,0 +1,57 @@
+<div th:insert="header.html">...</div>
+<div th:insert="sidebar.html">...</div>
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1 class="text-center">All Employee</h1>
+
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-md-10 offset-1">
+
+          <div class="card">
+            <div class="card-body">
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Sl</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr th:each="emp : ${employeeList}">
+                    <td th:text="${emp.eid}"> </td>
+                    <td th:text="${emp.eName}"></td>
+                    <td th:text="${emp.eEmail}"></td>
+                    <td th:text="${emp.department.dName}"></td>
+                    <td th:text="${emp.eGender}"></td>
+                    <td th:text="${emp.eAddress}"></td>
+                    <td>
+                      <a th:href="@{'/emp_delete/'+${emp.eid}}" class="btn btn-danger">Delete</a>
+                      <a th:href="@{'/emp_edit/'+${emp.eid}}" class="btn btn-warning">Edit</a>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+              <!-- End Default Table Example -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+<div th:insert="footer.html">...</div>

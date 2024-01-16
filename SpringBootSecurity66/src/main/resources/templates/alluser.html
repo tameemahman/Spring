@@ -1,0 +1,66 @@
+<div th:insert="header.html">...</div>
+<div th:insert="sidebar.html">...</div>
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1 class="text-center">All Depratments</h1>
+
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+            <div class="col-md-10 offset-1">
+                <div class="card">
+                    <div class="card-body mt-3">
+
+                        <!-- start my work-->
+
+
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Gender</th>
+                                    <th>Cell</th>
+                                    <th>Image</th>
+
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr th:each="user: ${userList}">
+                                    <td th:text="${user.id}"></td>
+                                    <td th:text="${user.name}"></td>
+                                    <td th:text="${user.email}"></td>
+                                    <td th:text="${user.gender}"></td>
+                                    <td th:text="${user.cellNo}"></td>
+                                    <td><img height="80px" th:src="@{${'/public/display?id=' + user.id}}" alt=""></td>
+                                    <td>
+
+                                    </td>
+
+                                </tr>
+                                </tbody>
+
+                            </table>
+
+
+                        <!--                        end my work-->
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+</main><!-- End #main -->
+
+
+
+<div th:insert="footer.html">...</div>
+
